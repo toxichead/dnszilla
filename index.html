@@ -1,46 +1,146 @@
 <!DOCTYPE html>
+<!-- SITE WAS MADE WITH SKELETON: http://getskeleton.com/ ------------------ -->
 <html lang="en">
+
 <head>
+    <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>DNSZilla</title>
+    <meta name="description" content="DNS with ad-block system.">
+    <meta name="author" content="hi im cyno">
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Inter:400,300,600" rel="stylesheet" type="text/css">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/additional.css">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+    <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.svg">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 </head>
+
 <body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
+    <!-- Primary Page Layout –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <a id="theme-button" class="button button-primary theme-button" href="#">dark mode</a>
     </div>
-  </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container section">
+        <h3 class="section-heading unselectable">DNSZilla</h3>
+        <p class="section-description unselectable">A hobby AdBlock DNS project.<br>Fast, free, without logs.</p>
+    </div>
+
+    <div class="container">
+        <div class="row unselectable">
+            <div class="two columns table-row table-header">Flag</div>
+            <div class="eight columns table-row table-header">Name</div>
+            <div class="two columns table-row table-header">Status</div>
+        </div>
+        <div class="row unselectable">
+            <div class="two columns table-row">
+                <img class="img-centerizer" src="https://cdn.ipregistry.co/flags/twemoji/ru.svg">
+            </div>
+            <div class="eight columns table-row selectable">ru.dnszilla.bar </div>
+            <div class="two columns table-row">
+                -
+            </div>
+        </div>
+        <div class="row unselectable">
+            <div class="two columns table-row">
+                <img class="img-centerizer" src="https://cdn.ipregistry.co/flags/twemoji/pl.svg">
+            </div>
+            <div class="eight columns table-row selectable">pl.dnszilla.bar </div>
+            <div class="two columns table-row">
+                -
+            </div>
+        </div>
+        <div class="row unselectable">
+            <div class="two columns table-row">
+                <img class="img-centerizer" src="https://cdn.ipregistry.co/flags/twemoji/de.svg">
+            </div>
+            <div class="eight columns table-row selectable">de.dnszilla.bar </div>
+            <div class="two columns table-row">
+                -
+            </div>
+        </div>
+        <div class="row unselectable">
+            <div class="two columns table-row">
+                <img class="img-centerizer" src="https://cdn.ipregistry.co/flags/twemoji/us.svg">
+            </div>
+            <div class="eight columns table-row selectable">us.dnszilla.bar </div>
+            <div class="two columns table-row">
+                -
+            </div>
+        </div>
+    </div>
+    <div class="container unselectable">
+        <hr>
+        <h5>Support project</h5>
+        <p>This is only <u>hobby</u> project. I spent own money to keep alive that DNS servers.<br>You can help me with a VPS (not NAT) by emailing me, or financially.</p>
+        <div class="row unselectable">
+            <div class="two columns">
+                <a class="button button-primary" href="#">Donate</a>
+            </div>
+            <div id="supportMethods" class="ten columns donate-menu">
+                <a href="#"><img src="images/kofi.svg" class="img-container"></a>
+                <a href="#"><img src="images/buymeacoffee.svg" class="img-container"></a>
+                <a href="#"><img src="images/liberapay.svg" class="img-container"></a>
+            </div>
+        </div>
+        <br><br>
+        <p>Or use crypto currencies:</p>
+        <label for="wallet-usdt-trc20">USDT (TRC-20, min 5USDT):</label>
+        <input class="u-full-width selectable" type="email" value="TRMHZLDggRdnYfgmmYrHMBHWXwSCkhuNVD" id="wallet-usdt-trc20" readonly>
+        <label for="wallet-usdt-erc20">USDT (ERC-20, min 5USDT):</label>
+        <input class="u-full-width selectable" type="email" value="0x7cA4331126e89c796a7666b8EdEC04f2F4e348F6" id="wallet-usdt-erc20" readonly>
+        <label for="wallet-ltc">LTC (min 0.001LTC):</label>
+        <input class="u-full-width selectable" type="email" value="MEfg3m97QhBY75vKo2GcmT2odF7dpHf2MT" id="wallet-ltc" readonly>
+        <label for="wallet-eth">ETH (min 0.001ETH):</label>
+        <input class="u-full-width selectable" type="email" value="MEfg3m97QhBY75vKo2GcmT2odF7dpHf2MT" id="wallet-eth" readonly>
+        <br><br><br>
+    </div>
+    <!-- JQuery code --------------------------------------------------- -->
+    <script>
+        //buttons
+        var themeButton = $("#theme-button");
+        //theme
+        if (Cookies.get('theme') == undefined) Cookies.set('theme', 'light', { expires: 9999 }); else if (Cookies.get('theme') == "light") { themeButton.text("light mode"); $("body").addClass("body-dark-mode"); } else if (Cookies.get('theme') == "dark") { themeButton.text("dark mode"); $("body").addClass("body-light-mode"); }
+        //polling buttons 
+        $(document).ready(function () {
+            themeButton.click(function(){
+                if (Cookies.get('theme') == "light")
+                {
+                    themeButton.text("light mode");
+                    $("body").removeClass("body-light-mode");
+                    $("body").addClass("body-dark-mode");
+                    Cookies.set('theme', 'dark', { expires: 9999 });
+                }
+                else if (Cookies.get('theme') == "dark")
+                {
+                    themeButton.text("dark mode");
+                    $("body").removeClass("body-dark-mode");
+                    $("body").addClass("body-light-mode");
+                    Cookies.set('theme', 'light', { expires: 9999 });
+                }
+            });
+        });
+    </script>
+    
+    <!-- End Document –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- NOTES FOR ME -------------------------------------------------- -->
+    <!-- https://www.buymeacoffee.com/ --------------------------------- -->
+    <!-- https://liberapay.com/ ---------------------------------------- -->
+    <!-- https://ko-fi.com/ -------------------------------------------- -->
+    <!-- NOTES END ----------------------------------------------------- -->
 </body>
 </html>

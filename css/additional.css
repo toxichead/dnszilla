@@ -1,0 +1,103 @@
+/* ------------ */
+/* STYLE THINGS */
+/* ------------ */
+
+/* sections, rows and etc */
+.section { padding: 8rem 0 8rem; text-align: center; }
+.section-heading, .section-description { margin-bottom: 1.2rem; }
+.unselectable {
+   user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+}
+.selectable {
+   user-select: text;
+   -webkit-user-select: text;
+   -webkit-touch-callout: none;
+   -khtml-user-select: text;
+   -moz-user-select: text;
+   -ms-user-select: text;
+   -o-user-select: none;
+}
+.img-container {
+    height: 2.375rem;
+    width: 2.375rem;
+}
+.flex-table {
+    box-sizing: border-box;
+    display: flex;
+}
+.donate-menu { margin: 0.75rem 0 0 1rem; }
+/*.flex-table .column1 {
+  flex: 9.5rem;
+}
+.flex-table .column2 {
+  flex: calc(100%-9.5rem);
+}*/
+.table-row {
+    border-radius: 4px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    height: 32.5px;
+    line-height: 30px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    text-align: center;
+    background: rgba(238, 238, 238, 0.5);
+}
+.table-header {
+    margin-bottom: 1.125rem;
+    font-weight: 600;
+    background: rgb(238, 238, 238);
+}
+.img-centerizer {
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* light and dark mode */
+body {  transition: color 0.25s ease-in-out, background 0.25s ease-in-out; }
+.body-light-mode { color:#000; background: rgba(255, 255, 255, 0.75); }
+.body-dark-mode { color:rgba(255, 255, 255, 0.75); background:#000; }
+.body-dark-mode .u-full-width {color:#000; background-color: rgba(255, 255, 255, 0.5); border: 1px solid rgba(209, 209, 209, 0.5);}
+.body-dark-mode .button-primary {color:#000; background-color: rgba(51, 195, 240, 0.75); border-color: rgba(51, 195, 240, 0.5); }
+.body-dark-mode .table-row { color: rgba(255, 255, 255, 0.75); background: rgba(238, 238, 238, 0.2); }
+.body-dark-mode .table-header { color: rgba(255, 255, 255, 0.75); background: rgba(238, 238, 238, 0.325); }
+.theme-button { margin: 2rem 0 0 0; transition: all 0.25s ease-in-out; }
+
+/* ------------ */
+/* MEDIA THINGS */
+/* ------------ */
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+    .section {
+        padding: 5rem 0 5rem;
+    }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+    .section {
+        padding: 7rem 0 7rem;
+    }
+    .section-heading,.section-description {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+    .section {
+        padding: 10rem 0 10rem;
+    }
+}
